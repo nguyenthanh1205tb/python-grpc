@@ -1,0 +1,18 @@
+syntax = "proto3";
+package Actor;
+
+service Actor {
+  rpc getActors (GetActorsRequest) returns (GetActorsResponse);
+}
+
+message ActorsInfomation {
+  int32 actor_id = 1;
+  string first_name = 2;
+  string last_name = 3;
+}
+
+message GetActorsRequest {}
+
+message GetActorsResponse {
+  ActorsInfomation data = 1;
+}
